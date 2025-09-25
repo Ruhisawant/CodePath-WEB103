@@ -1,0 +1,367 @@
+/* Import Pico CSS from CDN since local path won't work in this setup */
+@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css");
+
+/* Cosmic-Chow Custom Styles */
+:root {
+  /* Cosmic color palette */
+  --cosmic-primary: #6366f1; /* Indigo */
+  --cosmic-secondary: #8b5cf6; /* Purple */
+  --cosmic-accent: #06b6d4; /* Cyan */
+  --cosmic-dark: #0f172a; /* Dark slate */
+  --cosmic-darker: #020617; /* Darker slate */
+  --cosmic-light: #f1f5f9; /* Light slate */
+  --cosmic-gold: #fbbf24; /* Amber */
+  
+  /* Override Pico variables for dark theme */
+  --pico-primary-600: var(--cosmic-primary);
+  --pico-primary-700: var(--cosmic-secondary);
+}
+
+/* Force dark theme for cosmic feel */
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  --pico-background-color: var(--cosmic-darker);
+  --pico-card-background-color: var(--cosmic-dark);
+  --pico-primary-600: var(--cosmic-primary);
+  --pico-primary-700: var(--cosmic-secondary);
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, var(--cosmic-darker) 0%, var(--cosmic-dark) 100%);
+  min-height: 100vh;
+  color: var(--cosmic-light);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Space background with image */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('/images/space.jpeg'), /* Add your space background image here */
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.05) 0%, transparent 50%);
+  background-size: cover, auto, auto, auto;
+  background-position: center, center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header styling */
+header {
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+header nav {
+  container: main / inline-size;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+  background: linear-gradient(45deg, var(--cosmic-primary), var(--cosmic-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Food cards grid - image-only layout */
+.foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Food card styling - image only */
+.food-card {
+  position: relative;
+  height: 200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--cosmic-dark), var(--cosmic-dark)) padding-box,
+              linear-gradient(45deg, var(--cosmic-primary), var(--cosmic-accent)) border-box;
+}
+
+.food-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(99, 102, 241, 0.3),
+    0 0 0 1px rgba(99, 102, 241, 0.5);
+  border-color: var(--cosmic-primary);
+}
+
+.food-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.food-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Add a subtle overlay for better hover effect */
+.food-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.food-card:hover::after {
+  opacity: 1;
+}
+
+/* Hide all text content in grid view */
+.food-card-content {
+  display: none;
+}
+
+/* Optional: Add a subtle title overlay that appears on hover */
+.food-card-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+}
+
+.food-card:hover .food-card-title-overlay {
+  transform: translateY(0);
+}
+
+/* Food detail page */
+.food-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.food-detail-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.food-detail-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.food-detail-content {
+  padding: 2rem;
+}
+
+.food-detail-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--cosmic-primary), var(--cosmic-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.food-detail-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.food-detail-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(241, 245, 249, 0.9);
+}
+
+.food-submission-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--cosmic-accent);
+}
+
+/* Buttons */
+button, .button, [type="button"], [type="submit"], [type="reset"] {
+  background: linear-gradient(45deg, var(--cosmic-primary), var(--cosmic-secondary));
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:hover, .button:hover, [type="button"]:hover, [type="submit"]:hover, [type="reset"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+/* Back button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: var(--cosmic-accent);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--cosmic-primary);
+  transform: translateX(-4px);
+}
+
+/* Loading and error states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.125rem;
+  color: var(--cosmic-accent);
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* 404 page */
+.not-found {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  background: linear-gradient(45deg, var(--cosmic-primary), var(--cosmic-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1.25rem;
+  color: rgba(241, 245, 249, 0.8);
+  margin-bottom: 2rem;
+}
+
+.not-found a {
+  color: var(--cosmic-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.not-found a:hover {
+  color: var(--cosmic-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .foods-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .food-card {
+    height: 150px;
+  }
+  
+  .food-detail-title {
+    font-size: 2rem;
+  }
+  
+  .food-detail-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .foods-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .food-card {
+    height: 120px;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.food-card, .food-detail-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-cosmic-primary { color: var(--cosmic-primary); }
+.text-cosmic-accent { color: var(--cosmic-accent); }
+.text-cosmic-gold { color: var(--cosmic-gold); }

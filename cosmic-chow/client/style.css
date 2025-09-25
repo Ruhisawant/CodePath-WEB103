@@ -1,0 +1,200 @@
+:root {
+	background-image: url("images/space.jpeg");
+	background-size: cover;
+	background-position: left;
+	background-attachment: fixed;
+	
+	font-family: Avenir, Helvetica, sans-serif;
+	color: white;
+	min-height: 100vh;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 40px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Food Card styles for home page */
+.food-card {
+	position: absolute;
+	cursor: pointer;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.food-card:hover {
+	transform: scale(1.1) translateY(-5px);
+	z-index: 10;
+}
+
+.food-card img {
+	width: 120%;
+	height: auto;
+	transition: all 0.3s ease;
+	filter: brightness(0.9);
+}
+
+.food-card:hover img {
+	filter: brightness(1.2);
+	transform: scale(1.05);
+}
+
+/* Food detail page styles */
+.food-info {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+	align-items: flex-start;
+	background: linear-gradient(145deg, rgba(15, 15, 25, 0.95), rgba(30, 20, 40, 0.9));
+	border-radius: 24px;
+	padding: 50px;
+	backdrop-filter: blur(20px);
+	border: 2px solid rgba(255, 255, 255, 0.15);
+	width: 100%;
+	max-width: 1100px;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.image-container {
+	flex: 1;
+	max-width: 480px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	border: 3px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+	z-index: 1;
+}
+
+.food-details {
+	flex: 1;
+	padding-left: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+.title-section {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.food-details h2 {
+	font-size: 2.5rem;
+	margin: 0 0 8px 0;
+}
+
+.subtitle {
+	font-size: 1rem;
+	color: #cbd5e1;
+	margin: 8px 0;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	opacity: 0.8;
+}
+
+.food-details p {
+	font-size: 1.15rem;
+	line-height: 1.8;
+	margin-top: 25px;
+	color: #f1f5f9;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+	padding: 20px 24px;
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	position: relative;
+	transition: all 0.3s ease;
+	border-left: 3px solid #6366f1;
+}
+
+#description {
+	border: 1px solid rgba(139, 92, 246, 0.2);
+	position: relative;
+	overflow: hidden;
+	margin: 10px 0;
+	background: rgba(255, 255, 255, 0.08);
+	border-left: 3px solid #8b5cf6;
+}
+
+.home-button {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	background: linear-gradient(135deg, #6366f1, #8b5cf6);
+	color: white;
+	padding: 12px 20px;
+	text-decoration: none;
+	border-radius: 12px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	z-index: 1000;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+	backdrop-filter: blur(10px);
+}
+
+.home-button:hover {
+	background: linear-gradient(135deg, #5b5bd6, #7c3aed);
+	transform: translateY(-3px);
+	box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+/* 404 page styles */
+.fof-container {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: black;
+}
+
+.fof {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.fof h1 {
+	color: rgb(26, 25, 25);
+	font-size: 50px;
+	display: inline-block;
+	padding-right: 12px;
+	animation: type .6s alternate infinite;
+}
+
+@keyframes type {
+	from {box-shadow: inset -3px 0px 0px #888;}
+	to {box-shadow: inset -3px 0px 0px transparent;}
+}
