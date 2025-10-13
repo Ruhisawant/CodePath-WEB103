@@ -1,0 +1,106 @@
+/* Events page styles */
+.events-page {
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+.events-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.location-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.location-filter label {
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.location-filter select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(217, 29, 242, 0.3);
+}
+
+.event-card h3 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.event-card p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.event-card strong {
+  color: var(--secondary-color);
+}
+
+.countdown {
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.past-event {
+  opacity: 0.7;
+  border-color: #666;
+}
+
+.past-event .countdown {
+  background-color: #666;
+}
+
+.past-event h3 {
+  color: #666;
+  text-decoration: line-through;
+}
+
+/* No events message */
+.events-list p {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  grid-column: 1 / -1;
+  text-shadow: 1px 1px 2px black;
+}
