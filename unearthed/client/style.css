@@ -39,7 +39,7 @@
 	border-color: rgb(3, 7, 89);
 	border-radius: 16px;
 	box-sizing: border-box;
-	color: rgb(3, 7, 89);
+	color: rgb(3, 7, 90);
 	cursor: pointer;
 	padding: 15px 16px;
 	text-align: center;
@@ -61,7 +61,7 @@ main {
 	background: transparent;
 	border-style: solid;
 	border-width: 3px;
-	border-color: rgb(3, 7, 89);
+	border-color: rgb(3, 7, 90);
 	border-radius: 0.3rem;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.057);
 	margin-top: 0px;
