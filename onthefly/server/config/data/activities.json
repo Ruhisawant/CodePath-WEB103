@@ -1,0 +1,82 @@
+[
+  {
+    "trip_id": 1,
+    "activity": "Visit Buckingham Palace",
+    "num_votes": 12
+  },
+  {
+    "trip_id": 1,
+    "activity": "Tour Edinburgh Castle",
+    "num_votes": 15
+  },
+  {
+    "trip_id": 1,
+    "activity": "Hike the Cliffs of Moher",
+    "num_votes": 20
+  },
+  {
+    "trip_id": 1,
+    "activity": "Pub crawl in Dublin",
+    "num_votes": 18
+  },
+  {
+    "trip_id": 2,
+    "activity": "Gondola ride in Venice",
+    "num_votes": 25
+  },
+  {
+    "trip_id": 2,
+    "activity": "Visit the Uffizi Gallery",
+    "num_votes": 14
+  },
+  {
+    "trip_id": 2,
+    "activity": "Explore the Colosseum",
+    "num_votes": 22
+  },
+  {
+    "trip_id": 2,
+    "activity": "Climb Florence Cathedral dome",
+    "num_votes": 16
+  },
+  {
+    "trip_id": 3,
+    "activity": "Tour the Great Pyramids",
+    "num_votes": 30
+  },
+  {
+    "trip_id": 3,
+    "activity": "Cruise the Nile River",
+    "num_votes": 28
+  },
+  {
+    "trip_id": 3,
+    "activity": "Visit Valley of the Kings",
+    "num_votes": 24
+  },
+  {
+    "trip_id": 3,
+    "activity": "Explore Luxor Temple at night",
+    "num_votes": 19
+  },
+  {
+    "trip_id": 4,
+    "activity": "Snorkel with sea turtles",
+    "num_votes": 35
+  },
+  {
+    "trip_id": 4,
+    "activity": "Visit Charles Darwin Research Station",
+    "num_votes": 17
+  },
+  {
+    "trip_id": 4,
+    "activity": "Explore Quito's historic center",
+    "num_votes": 13
+  },
+  {
+    "trip_id": 4,
+    "activity": "Hike Sierra Negra Volcano",
+    "num_votes": 21
+  }
+]
