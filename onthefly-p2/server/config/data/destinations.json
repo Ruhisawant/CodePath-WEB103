@@ -1,0 +1,82 @@
+[
+  {
+    "destination": "Big Ben",
+    "description": "Iconic clock tower and symbol of London",
+    "city": "London",
+    "country": "United Kingdom",
+    "img_url": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+    "flag_img_url": "https://flagcdn.com/w320/gb.png"
+  },
+  {
+    "destination": "Edinburgh Castle",
+    "description": "Historic fortress dominating the skyline of Edinburgh",
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "img_url": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b",
+    "flag_img_url": "https://flagcdn.com/w320/gb.png"
+  },
+  {
+    "destination": "Cliffs of Moher",
+    "description": "Breathtaking sea cliffs on Ireland's west coast",
+    "city": "County Clare",
+    "country": "Ireland",
+    "img_url": "https://images.unsplash.com/photo-1590086782792-42dd2350140d",
+    "flag_img_url": "https://flagcdn.com/w320/ie.png"
+  },
+  {
+    "destination": "Colosseum",
+    "description": "Ancient amphitheater in the heart of Rome",
+    "city": "Rome",
+    "country": "Italy",
+    "img_url": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "flag_img_url": "https://flagcdn.com/w320/it.png"
+  },
+  {
+    "destination": "Venice Canals",
+    "description": "Romantic waterways winding through Venice",
+    "city": "Venice",
+    "country": "Italy",
+    "img_url": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
+    "flag_img_url": "https://flagcdn.com/w320/it.png"
+  },
+  {
+    "destination": "Florence Cathedral",
+    "description": "Stunning Renaissance cathedral with iconic dome",
+    "city": "Florence",
+    "country": "Italy",
+    "img_url": "https://images.unsplash.com/photo-1541450805095-8b8f96edb5e6",
+    "flag_img_url": "https://flagcdn.com/w320/it.png"
+  },
+  {
+    "destination": "Great Pyramids of Giza",
+    "description": "Ancient wonders of the world",
+    "city": "Giza",
+    "country": "Egypt",
+    "img_url": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a",
+    "flag_img_url": "https://flagcdn.com/w320/eg.png"
+  },
+  {
+    "destination": "Luxor Temple",
+    "description": "Ancient Egyptian temple complex on the Nile",
+    "city": "Luxor",
+    "country": "Egypt",
+    "img_url": "https://images.unsplash.com/photo-1539768942893-daf53e448371",
+    "flag_img_url": "https://flagcdn.com/w320/eg.png"
+  },
+  {
+    "destination": "Galápagos National Park",
+    "description": "Unique wildlife sanctuary and volcanic islands",
+    "city": "Galápagos Islands",
+    "country": "Ecuador",
+    "img_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+    "flag_img_url": "https://flagcdn.com/w320/ec.png"
+  },
+  {
+    "destination": "Quito Old Town",
+    "description": "Historic colonial city center",
+    "city": "Quito",
+    "country": "Ecuador",
+    "img_url": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4",
+    "flag_img_url": "https://flagcdn.com/w320/ec.png"
+  }
+]
